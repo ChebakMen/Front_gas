@@ -1,0 +1,170 @@
+.about__company-wrapper{
+    margin-bottom: 60px;
+}
+
+.about__company-text{
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 45px;
+}
+
+.about__company-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 80px;
+}
+
+
+.about__company-project{
+    background-color: var(--backgroundColor-card);
+    padding: 155px 70px 125px 30px;
+    
+}
+
+.about__company-project span{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.4;
+}
+
+.about__company-project p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #a1a1aa;
+}
+
+.about__company-country{
+    padding: 165px 70px 130px 30px;
+    border: 2px solid transparent;
+    border-image:linear-gradient(135deg, #d9a067 0%, #04b5e2 42.59%, #be68bd 100%) 1;
+}
+
+.about__company-country span{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.4;
+}
+
+.about__company-country p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #a1a1aa;
+}
+
+.about__company-info{
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 30px;
+    opacity: .5;
+}
+
+.mission__company{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    background-color: var(--backgroundColor-card);
+    border-radius: 10px;
+}
+
+.mission__company-text {
+    padding: 30px 40px ;
+}
+
+.mission__company-text h5{
+    font-weight: 700;
+    font-size: 40px;
+    background: linear-gradient(135deg, #6ddcff 0%, #7f60f9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+.mission__company-text p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    max-width: 790px;
+}
+
+.mission__company-img{
+    margin: 0 30px;
+}
+
+@media (max-width: 480px){
+    .about__company-text h3{
+        font-size: 28px;
+    }
+
+    .about__company-inner{
+        display: grid;
+        /* Три колонки */
+        grid-template-columns: auto auto auto;
+        /* Два ряда */
+        grid-template-rows: auto ;
+        /* Автоматическое размещение в ряд */
+        grid-auto-flow: row;
+        /* Отступы между ячейками */
+        gap: 20px;
+    }
+
+    .about__company-project {
+        padding: 20px;
+    }
+    
+    .about__company-project span{
+        font-size: 24px;
+    }
+    
+    .about__company-project p{
+        font-size: 16px;
+        max-width: 200px;
+    }
+
+    .about__company-img{
+        display: none;
+    }
+
+    .about__company-country{
+        padding: 20px;
+    }
+
+    .about__company-country span{
+        font-size: 24px;
+    }
+    
+    .about__company-country p{
+        font-size: 16px;
+    }
+
+    .about__company-info {
+        font-size: 16px;
+        grid-column:  2;
+    }
+
+    .mission__company{
+        display: block;
+    }
+
+    .mission__company-text{
+        padding: 20px;
+    }
+
+    .mission__company-text h5{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .mission__company-text p{
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .mission__company-img{
+        display: none;
+    }
+}

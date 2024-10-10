@@ -1,0 +1,26 @@
+.fond__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fond__inner-text{
+    max-width: 370px;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .fond__inner{
+        display: grid;
+    }
+    
+    .fond__inner-text{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .fond__inner-img img{
+        width: 350px;
+    }
+}

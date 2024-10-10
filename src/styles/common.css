@@ -1,0 +1,85 @@
+:root{
+    --textColor: #e1e1e1;
+    --backgroundColor-card: rgba(101,101,101, 0.5);
+    --border-grad: linear-gradient(135deg, #d9a067 0%, #04b5e2 42.59%, #be68bd 100%);
+}
+
+body{
+    font-family: 'Akshar',  sans-serif;
+    background-color: #010101;
+    
+}
+
+#root{
+    min-height: 100vh;   
+}
+
+.App{
+    min-height: 100vh;   
+    display: flex;
+    flex-direction: column; 
+}
+
+.container{
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+
+.header{
+    background-color: rgb(255, 255, 255, 0.05);
+    color: var(--textColor);
+    margin-bottom: 15px;
+}
+
+.firstList{
+    margin-top: 90px;
+    color: var(--textColor);
+}
+
+.infoCard{
+    margin: 70px;
+    color: var(--textColor);
+}
+
+.fond{
+    color: var(--textColor);
+    margin-bottom: 70px;
+}
+
+/* .information{
+    color: var(--textColor);
+} */
+
+.about__company{
+    color: var(--textColor);
+}
+
+.exchanger{
+    color: var(--textColor);
+}
+
+.accordion{
+    color: var(--textColor);
+    margin-bottom: 80px;
+}
+
+.form{
+    margin-bottom: 80px;
+    color: var(--textColor);
+}
+
+.blog{
+    color: var(--textColor);
+    margin-top: 120px;
+    margin-bottom: 130px;
+}
+
+@media (max-width: 480px) {
+
+    .infoCard{
+        margin: 80px 0;
+    }
+}
