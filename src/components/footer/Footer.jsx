@@ -1,6 +1,6 @@
 import './footer.css'
 import footerLogo from './../../image/Footer-logo.svg';
-import tg from './../../image/Telegram App.svg'
+import tg from './../../image/TelegramApp.svg'
 
 function Footer() {
     return(
@@ -21,7 +21,7 @@ function Footer() {
                             <a href="#form">контакты</a>
                         </li>
                         <li className='footer__nav-item'>
-                            <a href="#infoCard">ОБМЕННИКИ</a>
+                            <a href="#infoCard">Рейтинг доверия</a>
                         </li>
                     </ul>
                 </nav>

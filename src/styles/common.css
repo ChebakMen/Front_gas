@@ -1,7 +1,12 @@
+/* index.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 :root{
     --textColor: #e1e1e1;
     --backgroundColor-card: rgba(101,101,101, 0.5);
     --border-grad: linear-gradient(135deg, #d9a067 0%, #04b5e2 42.59%, #be68bd 100%);
+    --coin-border:linear-gradient(135deg, #6ddcff 0%, #7f60f9 100%);
 }
 
 body{
@@ -79,7 +84,22 @@ body{
 
 @media (max-width: 480px) {
 
+    .firstList{
+        margin-top: 50px;
+        color: var(--textColor);
+    }
+
     .infoCard{
         margin: 80px 0;
+    }
+
+    .form{
+        margin-bottom: 0px;
+    }
+
+    .blog{
+        color: var(--textColor);
+        margin-top: 120px;
+        margin-bottom: 90px;
     }
 }

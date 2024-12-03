@@ -1,10 +1,12 @@
 import  { React,useState } from 'react';
 import axios from 'axios';
+
 import formImg from './../../../../image/form-img.jpg'
-import './Form.css'
+
+import './exchengerForm.css'
 
 
-const TelegramForm = () => {
+const ExchengersForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -34,8 +36,8 @@ const TelegramForm = () => {
       return;
     }
 
-    const botToken = '7278543258:AAG7VsctJnW2z59utB1t0WdShez3HDrQb4s';
-    const chatId = '6460560966'; // Вы можете получить ID чата, используя @userinfobot
+    const botToken = '/';
+    const chatId = '/'; // Вы можете получить ID чата, используя @userinfobot
 
     const textMessage = `Имя: ${formData.name}\nТелефон: ${formData.phone}\nТелеграмм: ${formData.telegram}\nСообщение: ${formData.message}`;
 
@@ -54,44 +56,45 @@ const TelegramForm = () => {
   return (
     <section className="form">
         <div className="container">
-              <div className="form__title">
-                <h3>Оставить <span>заявку</span></h3>
+              <div className="coin__title">
+                <h3>Оценить <span>работу обменника</span></h3>
               </div>
             <div className="form__wrapper">
-                <form className='form__inner' onSubmit={handleSubmit}>
-                    <div className='form__inner-name'>
-                      <input className='form__name'
+                <form className='form__coin-inner' onSubmit={handleSubmit}>
+                    <div className='form__coin-name'>
+                      <input className='coin__name'
                           type="text"
                           name="name"
-                          placeholder='Ваше ФИО'
+                          placeholder='Название обменника'
                           value={formData.name}
                           onChange={handleChange}
                           required
                       />
                     </div>
-                    <div className='form__inner-number'>
-                        <input className='form__phone'
+                    <div className='coin__user-name'>
+                        <input className='coin__user'
+                            onSelect={"aaaaaa"}
                             type="tel"
                             name="phone"
-                            placeholder='Ваш телефон'
+                            placeholder='Ваше имя'
                             value={formData.phone}
                             onChange={handleChange}
                             required
                         />
                     </div>
-                    <div className='form__inner-tg'>
-                        <input className='form__tg'
+                    <div className='form__coin-assessment'>
+                        <input className='coin__assessment'
                             type="text"
                             name="telegram"
-                            placeholder='Ваш телеграмм'
+                            placeholder='Ваша оценка'
                             value={formData.telegram}
                             onChange={handleChange}
                             required
                         />
                     </div>
-                    <div className='form__inner-text'>
-                        <textarea className='form__text'
-                        placeholder='Опишите вашу порблему'
+                    <div className='form__coin-text'>
+                        <textarea className='coin__text'
+                        placeholder='Ваш комментарий'
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
@@ -109,17 +112,14 @@ const TelegramForm = () => {
                         </p>
                       </label>
                     </div>
-                    <div className="form__inner-btn">
-                      <button className='from__btn' type="submit">Отправить</button>
+                    <div className="coin__inner-btn">
+                      <button className='coin__btn' type="submit">Отправить</button>
                     </div>
                 </form>
-                <div className="form__image">
-                    <img src={formImg} alt="formImage" />
-                </div>
             </div>
         </div>
     </section>
   );
 };
 
-export default TelegramForm;
+export {ExchengersForm};

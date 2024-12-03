@@ -1,0 +1,12 @@
+.exchanger__wrapper{
+    color: #FFF ;
+}
+
+.exchanger__items{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.exchanger__section{
+    margin-left: 40px;
+}

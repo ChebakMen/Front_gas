@@ -1,13 +1,14 @@
-.form__title{
+.coin__title{
     margin-bottom: 60px;
+    max-width: 560px;
 }
 
-.form__title h3{
+.coin__title h3{
     font-weight: 700;
     font-size: 64px;
 }
 
-.form__title span{
+.coin__title span{
     background: linear-gradient(135deg, #6ddcff 0%, #7f60f9 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -19,74 +20,71 @@
     align-items: center;
 }
 
-.form__inner{
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    background: rgba(101, 101, 101, 0.2);
+.form__coin-inner{
     padding: 30px;
 }
 
-.form__inner-name{
+.form__coin-name{
     margin-bottom: 15px;
 }
 
-.form__name{
+.coin__name{
     height: 55px;
     padding: 17px 20px;
     width: 450px;
     background: none;
     font-weight: 500;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    /* color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7); */
     border-radius: 7px;
 }
 
-.form__inner-number{
+.coin__user-name{
     margin-bottom: 15px;
 }
 
-.form__phone{
+.coin__user{
     height: 55px;
     padding: 17px 20px;
     width: 450px;
     background: none;
     font-weight: 500;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    /* color: rgba(255, 255, 255, 0.7); */
+    /* border: 1px solid rgba(255, 255, 255, 0.7); */
     border-radius: 7px;
 }
 
-.form__inner-tg{
+.form__coin-assessment{
     margin-bottom: 25px;
 }
 
-.form__tg{
+.coin__assessment{
     height: 55px;
     padding: 17px 20px;
     width: 450px;
     background: none;
     font-weight: 500;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    /* color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7); */
     border-radius: 7px;
 }
 
-.form__inner-text{
+.form__coin-text{
     margin-bottom: 30px;
 }
 
-.form__text{
+.coin__text{
     height: 110px;
     padding: 17px 20px;
     width: 450px;
     background: none;
     font-weight: 500;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    /* color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7); */
     border-radius: 7px;
     resize: none;
 
@@ -111,14 +109,14 @@
     font-size: 15px;
 }
 
-.from__btn{
+.coin__btn{
     background: linear-gradient(96deg, #6ddcff 0%, #7f60f9 100%);
     border-radius: 7px;
-    padding: 21px 25px;
-    font-weight: 500;
+    padding: 15px 30px;
+    font-weight: 600;
     font-size: 20px;
     text-align: center;
-    color: var(--textColor);
+    color: #000;
     margin-right: 10px;
 }
 

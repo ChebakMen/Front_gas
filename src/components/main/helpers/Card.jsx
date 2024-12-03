@@ -7,7 +7,7 @@ function Card(props){
             <div className="card__inner-bottom">
                 <p>{props.subName}</p>
                 <div className="card__inner-btn">
-                    <a href="!#">Узнать подробнее</a>
+                    <a href="/exchanger">Узнать подробнее</a>
                 </div>
             </div>
         </div>

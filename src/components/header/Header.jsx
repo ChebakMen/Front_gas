@@ -16,7 +16,7 @@ function Header () {
                         <nav className="header__nav">
                             <ul className="header__nav-list">
                                 <li className="header__nav-items"><a href="#information">О компании</a></li>
-                                <li className="header__nav-items"><a href="#infoCard">Обменники </a></li>
+                                <li className="header__nav-items"><a href="#infoCard">Рейтинг доверия </a></li>
                                 <li className="header__nav-items"><a href="#form">Контакты</a></li>
                             </ul>
                         </nav>

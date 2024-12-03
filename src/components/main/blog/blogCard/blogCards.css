@@ -20,6 +20,10 @@
     font-size: 24px;
 }
 
+.blog__inner-all img{
+    vertical-align: baseline;
+}
+
 
 .blog__inner-text{
     display: flex;
@@ -48,6 +52,18 @@
 }
 
 @media (max-width: 480px) {
+
+    .blog__inner-all{
+        margin-bottom: 25px;
+    }
+
+    .blog__inner-all a{
+        font-size: 18px;
+    }
+
+    .blog__inner-all img{
+        vertical-align: top;
+    }
 
     .blog__inner-text{
         display: block;

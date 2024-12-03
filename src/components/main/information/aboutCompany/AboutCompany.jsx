@@ -14,8 +14,8 @@ function AboutCompany(){
                     <ul className="about__company-inner">
                         <li className="about__company-items">
                             <div className="about__company-project">
-                                <span>{'>500'}</span>
-                                <p>Успешно решенных задач</p>
+                                <span>{'>1,58'}</span> <span>{'млрд$'}</span>
+                                <p>Было украдено в 2024 году</p>
                             </div>
                         </li>
                         <li className="about__company-items">
@@ -25,8 +25,8 @@ function AboutCompany(){
                         </li>
                         <li className="about__company-items">
                             <div className="about__company-country">
-                                <span>{'>97'}</span>
-                                <p>Стран партнеров</p>
+                                <span>{'>1000'}</span>
+                                <p>Стали жертвами за сегодня </p>
                             </div>
                         </li>
                         <li className="about__company-items">

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './accordion.css'
-import pluse from './../../../../../image/pluse.svg'
+// import pluse from './../../../../../image/pluse.svg'
 
 // Аккордеон Item компонент
 const AccordionItem = ({ title, content, isOpen, onClick }) => (
     <div className="accordion-item">
         <div className="accordion__question" onClick={onClick}>
             <h4>{title}</h4>
-            <img src={pluse} alt="pluse" />
+            <img src={process.env.PUBLIC_URL + '/image/pluse.svg'} alt="pluse" />
         </div>
         {isOpen && (
             <div className="accordion__answer">

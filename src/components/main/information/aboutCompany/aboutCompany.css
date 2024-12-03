@@ -19,13 +19,13 @@
 
 .about__company-project{
     background-color: var(--backgroundColor-card);
-    padding: 155px 70px 125px 30px;
+    padding: 100px 50px 134px 30px;
     
 }
 
 .about__company-project span{
     font-weight: 700;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.4;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .about__company-country{
-    padding: 165px 70px 130px 30px;
+    padding: 130px 50px 146px 30px;
     border: 2px solid transparent;
     border-image:linear-gradient(135deg, #d9a067 0%, #04b5e2 42.59%, #be68bd 100%) 1;
 }
@@ -56,7 +56,7 @@
 .about__company-info{
     font-weight: 500;
     line-height: 1.4;
-    font-size: 30px;
+    font-size: 28px;
     opacity: .5;
 }
 
@@ -102,13 +102,14 @@
     .about__company-inner{
         display: grid;
         /* Три колонки */
-        grid-template-columns: auto auto auto;
+        grid-template-columns:  auto;
         /* Два ряда */
-        grid-template-rows: auto ;
+        grid-template-rows: auto auto;
         /* Автоматическое размещение в ряд */
         grid-auto-flow: row;
         /* Отступы между ячейками */
-        gap: 20px;
+        gap: 15px;
+        margin-bottom: 30px;
     }
 
     .about__company-project {
@@ -129,7 +130,7 @@
     }
 
     .about__company-country{
-        padding: 20px;
+        padding: 27px 20px 26px 20px;
     }
 
     .about__company-country span{
@@ -140,9 +141,9 @@
         font-size: 16px;
     }
 
-    .about__company-info {
+    .about__company-info p {
         font-size: 16px;
-        grid-column:  2;
+        grid-column:  span 2;
     }
 
     .mission__company{

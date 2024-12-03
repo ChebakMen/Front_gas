@@ -1,11 +1,11 @@
-import ExchangeList from './component/exchangeList/ExchangeList';
-import { Wallet } from './component/wallet/Wallets';
+import BadExchanges from './BadList/BadLists';
+import { Wallet } from './../component/wallet/Wallets';
 
-import './exchanger.css'
+import './../exchanger.css'
 
-import { ValueCoin } from './component/valueCoin/ValueCoin';
+import { ValueCoin } from './../component/valueCoin/ValueCoin';
 
-function Exchanger (){
+function BadExchanger (){
     return (
         <div className="exchanger__wrapper">
             <div className="container">
@@ -20,7 +20,7 @@ function Exchanger (){
                     </aside>
                     <section className='exchanger__section'>
                         <div className="exchenger-item">
-                            <ExchangeList />
+                            <BadExchanges />
                         </div>
                     </section>
                 </div>
@@ -35,4 +35,4 @@ function Exchanger (){
     )
 }
 
-export {Exchanger};
+export {BadExchanger};
