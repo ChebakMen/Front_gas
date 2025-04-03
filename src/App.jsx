@@ -1,42 +1,59 @@
-import {Header} from './components/header/Header';
-import { Footer } from './components/footer/Footer';
-import { Main } from './components/main/Main';
-import {Exchanger} from './components/pages/Exchanger'
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { BadExchanger } from './components/pages/badExchanger/BadExchenger';
 
+// import BackgroundLine from '../src/image/backgroundLine.svg'
+import { Login } from './pages/login/Login';
+import { Registration } from './element/regisrtation/Resistration';
+import CreateEvent from './popUpForm/createEvent/CreateEvent';
+import Main from './pages/main/Main';
 
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 
-function App() {
+function EventRouteWrapper() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSave = (eventData) => {
+    console.log('Сохраненные данные:', eventData);
+    setShowModal(false);
+  };
 
   return (
+    <>
+      <Button variant="primary" onClick={() => setShowModal(true)}>
+        Создать мероприятие
+      </Button>
+
+      <CreateEvent
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        onSave={handleSave}
+        onDelete={() => {
+          console.log('Удаление мероприятия');
+          setShowModal(false);
+        }}
+      />
+    </>
+  );
+}
+
+function App() {
+  return (
     <div className="App">
-       {/* настройитеть эффект при наведении и нажатии */}
-        <Header /> 
-       {/* <Router>
-        <Switch >
-            <Route exact path='/'>
-              <Main />
-            </Route>
-            <Route exact path='/exchangeer'>
-              <Exchangeer />
-            </Route>
-          </Switch>
-       </Router> */}
+      {/* <img className='backgorund__img' src={BackgroundLine} alt="" /> */}
 
-       {/* <Exhanger /> */}
+      <BrowserRouter>
+        <Routes>
+          {/* Временная заглушка, заменить на основую ссылку главное страницы */}
+          <Route path="/" element={<Login />} />
 
-        <BrowserRouter>
-        
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/exchanger" element={<Exchanger />} />
-            <Route path="/badExchenger" element={<BadExchanger />} />
-          </Routes>
-        </BrowserRouter>
-        <Footer />
-        
+          <Route path="/createEvent" element={<EventRouteWrapper />} />
+
+          <Route path="/main" element={<Main />} />
+          {/* Рабочая ссылка, настроена верно */}
+          <Route path="/registration" element={<Registration />} />
+          {/* <Route path='/resertPassword' element={} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
