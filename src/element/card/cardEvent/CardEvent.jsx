@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CheckedEvent from '../../../popUpForm/checkedEvent/checkedEvent';
 
 import './cardEvent.css';
 
@@ -86,46 +85,47 @@ function CardEvent({ event, handleShow }) {
   );
 }
 
-function ContainerEventCard() {
-  const [events, setEvents] = useState([]); // State for storing events
-  const [show, setShow] = useState(false); // State for modal visibility
-  const [selectedEvent, setSelectedEvent] = useState(null); // State for selected event
+// function ContainerEventCard({ url }) {
+//   const [events, setEvents] = useState([]);
+//   const [show, setShow] = useState(false);
+//   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const handleClose = () => setShow(false);
-  const handleShow = (event) => {
-    setSelectedEvent(event); // Set the selected event
-    setShow(true); // Open the modal
-  };
+//   const handleClose = () => setShow(false);
+//   const handleShow = (event) => {
+//     setSelectedEvent(event);
+//     setShow(true);
+//   };
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await fetch('http://127.0.0.1:8000/events/');
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        setEvents(data); // Store fetched events in state
-      } catch (error) {
-        console.error('Error fetching events:', error);
-      }
-    };
+//   useEffect(() => {
+//     const fetchEvents = async () => {
+//       try {
+//         console.log(url);
+//         const response = await fetch(url);
+//         if (!response.ok) {
+//           throw new Error(`HTTP error! Status: ${response.status}`);
+//         }
+//         const data = await response.json();
+//         setEvents(data); // Store fetched events in state
+//       } catch (error) {
+//         console.error('Error fetching events:', error);
+//       }
+//     };
 
-    fetchEvents();
-  }, []);
+//     fetchEvents();
+//   }, []);
 
-  return (
-    <>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-        {events.map((event) => (
-          <CardEvent key={event.id} event={event} handleShow={() => handleShow(event)} />
-        ))}
-      </div>
-      {selectedEvent && (
-        <CheckedEvent show={show} handleClose={handleClose} event={selectedEvent} />
-      )}
-    </>
-  );
-}
+//   return (
+//     <>
+//       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'start' }}>
+//         {events.map((event) => (
+//           <CardEvent key={event.id} event={event} handleShow={() => handleShow(event)} />
+//         ))}
+//       </div>
+//       {selectedEvent && (
+//         <CheckedEvent show={show} handleClose={handleClose} event={selectedEvent} />
+//       )}
+//     </>
+//   );
+// }
 
-export default ContainerEventCard;
+export default CardEvent;

@@ -1,10 +1,12 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
 // import BackgroundLine from '../src/image/backgroundLine.svg'
-import { Login } from './pages/login/Login';
-import { Registration } from './element/regisrtation/Resistration';
+import Login from './pages/login/Login';
+import { LoginAdmin } from './pages/login/Login';
+
 import CreateEvent from './popUpForm/createEvent/CreateEvent';
 import Main from './pages/main/Main';
+import Header from './element/header/Header';
 
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
@@ -35,23 +37,27 @@ function EventRouteWrapper() {
     </>
   );
 }
-
 function App() {
+  const [token, setToken] = useState(localStorage.getItem('token') || '');
+  console.log(token);
+
   return (
     <div className="App">
-      {/* <img className='backgorund__img' src={BackgroundLine} alt="" /> */}
+      <Header />
+      {/*  <img className='backgorund__img' src={BackgroundLine} alt="" /> */}
 
       <BrowserRouter>
         <Routes>
-          {/* Временная заглушка, заменить на основую ссылку главное страницы */}
-          <Route path="/" element={<Login />} />
-
-          <Route path="/createEvent" element={<EventRouteWrapper />} />
-
-          <Route path="/main" element={<Main />} />
-          {/* Рабочая ссылка, настроена верно */}
-          <Route path="/registration" element={<Registration />} />
-          {/* <Route path='/resertPassword' element={} /> */}
+          <Route
+            path="/"
+            element={token ? <Navigate to="/main" /> : <Login setToken={setToken} />}
+          />
+          <Route path="/login" element={<Login setToken={setToken} />} />
+          {/* <Route
+            path="/createEvent"
+            element={token ? <EventRouteWrapper /> : <Navigate to="/" />}
+          /> */}
+          <Route path="/main" element={token ? <Main token={token} /> : <Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </div>

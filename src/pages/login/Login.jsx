@@ -1,16 +1,46 @@
+// Login.js
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login({ setToken }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberPassword, setRememberPassword] = useState(true);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Обработка данных формы
-    console.log({ email, password, rememberPassword });
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          grant_type: 'password',
+          username: email,
+          password: password,
+          scope: '',
+          client_id: '',
+          client_secret: '',
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const token = data.access_token;
+        setToken(token);
+        localStorage.setItem('token', token);
+        navigate('/events');
+      } else {
+        console.error('Login failed:', response.status);
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+    }
   };
 
   return (
@@ -73,4 +103,4 @@ function Login() {
   );
 }
 
-export { Login };
+export default Login;
